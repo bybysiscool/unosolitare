@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+#game-container {
+    margin-top: 20px;
+}
+
+#deck, #discard-pile {
+    display: inline-block;
+    width: 150px;
+    height: 200px;
+    border: 2px solid black;
+    background-color: white;
+    line-height: 200px;
+    text-align: center;
+    font-size: 18px;
+    margin: 10px;
+    position: relative;
+}
+
+.card {
+    display: inline-block;
+    width: 80px;
+    height: 120px;
+    border: 2px solid black;
+    margin: 5px;
+    text-align: center;
+    line-height: 120px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.back {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 120px;
+}
+
+.red { background-color: red; }
+.blue { background-color: blue; }
+.green { background-color: green; }
+.yellow { background-color: yellow; }
+.wild { background-color: black; color: white; }
+
+.hidden {
+    display: none;
+}
+
+@keyframes shuffle {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.shuffling {
+    animation: shuffle 0.5s ease-in-out infinite;
+}
+
+#restart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#restart:hover {
+    background-color: #ff4500;
+}
