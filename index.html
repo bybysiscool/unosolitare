@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uno Solitaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Uno Solitaire</h1>
+    <div id="game-container">
+        <div id="deck" onclick="drawCard()">
+            <div class="card back">1つ</div>
+        </div>
+        <div id="discard-pile">Discard Pile</div>
+        <div id="player-hand">Your Hand:</div>
+        <div id="color-picker" class="hidden">
+            <button onclick="setColor('red')" style="background-color: red;">Red</button>
+            <button onclick="setColor('blue')" style="background-color: blue;">Blue</button>
+            <button onclick="setColor('green')" style="background-color: green;">Green</button>
+            <button onclick="setColor('yellow')" style="background-color: yellow;">Yellow</button>
+        </div>
+        <button id="restart" class="hidden" onclick="restartGame()">Play Again</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
